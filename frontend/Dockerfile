@@ -2,15 +2,14 @@
 FROM node:16-alpine
 
 # set working directory
-WORKDIR /app
+WORKDIR .
 
 # install app dependencies
-COPY app/package.json ./
+COPY ./package.json ./
 
-#COPY yarn.lock ./
 RUN yarn install
 #
-COPY app .
+COPY . .
 
 # build react app
 RUN yarn build
