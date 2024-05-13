@@ -1,13 +1,12 @@
-// reducers/chatReducer.js
-import { SEND_MESSAGE } from '../actions/types';
+// reducers/reducers.js
 
 const initialState = {
   messages: []
 };
 
-const chatReducer = (state = initialState, action) => {
+const rootReducers = (state = initialState, action) => {
   switch(action.type) {
-    case SEND_MESSAGE:
+    case 'SEND_MESSAGE':
       return {
         ...state,
         messages: [...state.messages, action.payload]
@@ -17,4 +16,4 @@ const chatReducer = (state = initialState, action) => {
   }
 };
 
-export default chatReducer;
+export default rootReducers;
