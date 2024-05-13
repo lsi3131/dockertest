@@ -28,5 +28,5 @@ for img_tag in img_tags:
     img_url = img_tag.get('src')
     img_response = requests.get(img_url)
     # 이미지 파일로 저장
-    with open('image.jpg', 'wb') as f:
+    with open('../image.jpg', 'wb') as f:
         f.write(img_response.content)

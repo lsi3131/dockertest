@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const TestForm = (props) => {
-    const [text, setText] = useState('데이터 전송 준비')
+    const [text, setText] = useState('대기중')
 
     const sendToServer = async () => {
       const url = "http://127.0.0.1:8000/api/articles/"

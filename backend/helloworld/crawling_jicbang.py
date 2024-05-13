@@ -19,12 +19,12 @@ soup = BeautifulSoup(html_code, 'html.parser')
 img_tags = soup.find_all('img')
 
 # 이미지를 저장할 디렉토리 생성
-os.makedirs('images', exist_ok=True)
+os.makedirs('../images', exist_ok=True)
 
 # 각 이미지의 src 속성을 가져와서 이미지 다운로드
 image_index = 0
 for img_tag in img_tags:
-    img_path = os.path.join('images', f'image_{image_index}.jpg')
+    img_path = os.path.join('../images', f'image_{image_index}.jpg')
     img_url = img_tag.get('src')
 
     with open(img_path, 'wb') as f:
